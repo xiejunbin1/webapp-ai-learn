@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tab/测试考场</title>
+    <defs>
+        <linearGradient x1="22.4267564%" y1="0%" x2="83.0078125%" y2="95.2380931%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFEFDE" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="18.5625" cy="24.3375" r="18.5625"></circle>
+        <filter x="-4.0%" y="-4.0%" width="108.1%" height="108.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#61CEB6" offset="0%"></stop>
+            <stop stop-color="#41A58F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-5.34656785%" y1="30.3479674%" x2="104.725307%" y2="30.3479674%" id="linearGradient-5">
+            <stop stop-color="#FFFFFE" offset="0%"></stop>
+            <stop stop-color="#64CCB5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="icon/tab/测试考场" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/测试考场">
+            <rect id="矩形" x="0" y="0" width="104" height="104"></rect>
+            <circle id="椭圆形" fill="#5981F9" cx="52" cy="52" r="50"></circle>
+            <g id="测试考场" transform="translate(17.000000, 23.000000)">
+                <g id="编组-7" transform="translate(15.675000, 0.000000)">
+                    <path d="M4.125,0 L34.2,0 L34.2,0 L47.025,14.6898698 L46.6761434,53.6619233 C46.6558802,55.9256009 44.815077,57.75 42.5513087,57.75 L4.125,57.75 C1.84682541,57.75 2.78995922e-16,55.9031746 0,53.625 L0,4.125 C-2.78995922e-16,1.84682541 1.84682541,4.18493883e-16 4.125,0 Z" id="矩形" fill="#FFA475"></path>
+                    <path d="M5.775,2.475 L36.159614,2.475 L36.159614,2.475 L44.55,12.0153861 L44.55,51.15 C44.55,53.4281746 42.7031746,55.275 40.425,55.275 L5.775,55.275 C3.49682541,55.275 1.65,53.4281746 1.65,51.15 L1.65,6.6 C1.65,4.32182541 3.49682541,2.475 5.775,2.475 Z" id="矩形" fill="url(#linearGradient-1)"></path>
+                    <rect id="矩形" fill="#F38C4A" x="18.975" y="36.3" width="18.975" height="4.95" rx="2.475"></rect>
+                    <rect id="矩形" fill="#F38C4A" x="18.975" y="36.3" width="18.975" height="4.95" rx="2.475"></rect>
+                    <path d="M22.387384,21.5676084 L35.587384,22.1676084 C36.9092238,22.227692 37.95,23.3168508 37.95,24.6400555 L37.95,25.575 C37.95,26.9419048 36.8419048,28.05 35.475,28.05 L22.275,28.05 C20.9080952,28.05 19.8,26.9419048 19.8,25.575 L19.8,24.0400555 C19.8,22.6731507 20.9080952,21.5650555 22.275,21.5650555 C22.3124758,21.5650555 22.3499468,21.5659067 22.387384,21.5676084 Z" id="矩形" fill="#FFD7C1"></path>
+                    <rect id="矩形" fill="#FE945C" x="19.8" y="21.45" width="18.15" height="4.95" rx="2.475"></rect>
+                    <path d="M34.2,1.56333343 L44.55,14.6898698 L44.55,18.15 L36.675,18.15 C35.3080952,18.15 34.2,17.0419048 34.2,15.675 L34.2,1.56333343 L34.2,1.56333343 Z" id="路径-5" fill="#FFD7C1"></path>
+                    <path d="M34.2,0 L47.025,14.6898698 L36.675,14.6898698 C35.3080952,14.6898698 34.2,13.5817746 34.2,12.2148698 L34.2,0 L34.2,0 Z" id="路径-5" fill="#FA8A51"></path>
+                </g>
+                <g id="编组" transform="translate(0.000000, 14.850000)">
+                    <g id="椭圆形">
+                        <use fill="#64CCB5" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    </g>
+                    <circle id="椭圆形" fill="#41A58F" transform="translate(19.073574, 23.947273) rotate(3.000000) translate(-19.073574, -23.947273) " cx="19.0735739" cy="23.947273" r="14.85"></circle>
+                    <ellipse id="椭圆形" fill="#FFFFFE" transform="translate(18.996999, 24.099246) rotate(3.000000) translate(-18.996999, -24.099246) " cx="18.9969994" cy="24.0992462" rx="12.375" ry="12.3374614"></ellipse>
+                    <path d="M18.9297892,20.2336649 L25.5733254,20.2779588 C26.2427507,20.282422 26.7843855,20.8238881 26.7890573,21.4933119 C26.7936476,22.1510501 26.2641667,22.6879734 25.6064285,22.6925637 C25.6010113,22.6926015 25.5955939,22.6926023 25.5901767,22.6925662 L18.9466406,22.6482723 C18.2772153,22.6438091 17.7355805,22.102343 17.7309087,21.4329192 C17.7263184,20.7751811 18.2557993,20.2382578 18.9135375,20.2336675 C18.9189547,20.2336297 18.9243721,20.2336288 18.9297892,20.2336649 Z" id="矩形" fill="#FFBD76" transform="translate(22.259983, 21.463116) rotate(-45.000000) translate(-22.259983, -21.463116) "></path>
+                    <rect id="矩形" fill="url(#linearGradient-4)" x="16.5" y="2.475" width="4.95" height="4.95" rx="1.2375"></rect>
+                    <rect id="矩形" fill="url(#linearGradient-5)" x="12.375" y="0" width="12.375" height="3.3" rx="1.2375"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

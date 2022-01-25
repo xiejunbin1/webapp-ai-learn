@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/待办任务/数学</title>
+    <defs>
+        <linearGradient x1="-3.87208023%" y1="73.168687%" x2="71.7352931%" y2="30.5505711%" id="linearGradient-1">
+            <stop stop-color="#FFC65C" offset="0%"></stop>
+            <stop stop-color="#F89932" offset="64.8109523%"></stop>
+            <stop stop-color="#F89831" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="53.9752508%" x2="100%" y2="53.9752508%" id="linearGradient-2">
+            <stop stop-color="#FFD27E" offset="0%"></stop>
+            <stop stop-color="#FFB464" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="75.1570988%" y1="62.8123384%" x2="42.7069234%" y2="36.2366319%" id="linearGradient-3">
+            <stop stop-color="#7AA2FF" offset="0%"></stop>
+            <stop stop-color="#B9CCFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M58.9071024,2.21439633 L1.18535496,51.4492488 C-0.236070967,52.6616808 -0.402667601,54.7935405 0.813250962,56.2108906 C1.45672101,56.9609592 2.39707281,57.3927839 3.38697027,57.3927839 L61.1087177,57.3927839 C62.979255,57.3927839 64.495625,55.8807619 64.495625,54.0155882 L64.495625,4.78073575 C64.495625,2.91556208 62.979255,1.40354007 61.1087177,1.40354007 C60.3013818,1.40354007 59.520599,1.69110284 58.9071024,2.21439633 Z" id="path-4"></path>
+        <filter x="-3.1%" y="-3.6%" width="106.2%" height="107.1%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.199464598 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M26.4192192,27.243059 L50.9470746,44.4125578 C51.3779731,44.7141867 51.4827667,45.3080174 51.1811378,45.7389158 C51.0029224,45.9935093 50.7116982,46.1451368 50.4009272,46.1451368 L25.3269244,46.1451368 C24.2749673,46.1451368 23.4221875,45.2923571 23.4221875,44.2404 L23.4221875,28.8034802 C23.4221875,27.7515231 24.2749673,26.8987434 25.3269244,26.8987434 C25.7177232,26.8987434 26.0990643,27.0189506 26.4192192,27.243059 Z" id="path-6"></path>
+        <filter x="-10.0%" y="-5.9%" width="113.1%" height="120.2%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.110877404 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-25.0%" y="-27.4%" width="143.1%" height="163.1%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="1" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.239215686   0 0 0 0 0.552941176   0 0 0 0 0.968627451  0 0 0 0.500464379 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/待办任务/数学" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-2" transform="translate(10.000000, 16.000000)">
+            <path d="M14.1097341,10.1879775 L61.8147639,50.42729 C63.4229638,51.7838106 63.6269901,54.1871915 62.2704695,55.7953913 C61.5507166,56.6486821 60.492913,57.1433354 59.376615,57.1486244 L11.6715851,57.3746492 C9.56769454,57.3846174 7.85407343,55.6871578 7.84410526,53.5832672 C7.84407676,53.577251 7.84406251,53.5712346 7.84406251,53.5652183 L7.84406251,13.099881 C7.84406251,10.9959667 9.54962197,9.29040728 11.6535362,9.29040728 C12.5525294,9.29040728 13.4225574,9.60834224 14.1097341,10.1879775 Z" id="三角形备份" fill="url(#linearGradient-1)"></path>
+            <path d="M14.1342127,14.674262 L54.0718497,48.942568 C55.6685481,50.3126078 55.8522913,52.7176243 54.4822515,54.3143228 C53.7585309,55.1577753 52.7025613,55.64312 51.5911732,55.64312 L11.6535362,55.64312 C9.54962197,55.64312 7.84406251,53.9375606 7.84406251,51.8336463 L7.84406251,17.5653403 C7.84406251,15.4614261 9.54962197,13.7558666 11.6535362,13.7558666 C12.5635821,13.7558666 13.4435624,14.0816527 14.1342127,14.674262 Z" id="三角形备份" fill="url(#linearGradient-2)"></path>
+            <path d="M9.36787427,1.41443037 L67.2638504,51.0773798 C68.7073532,52.3048303 68.9375053,54.5385405 67.7779094,56.066511 C67.1415629,56.9050089 66.1803022,57.3927839 65.1642164,57.3927839 L4.2241517,57.3927839 C2.37256781,57.3927839 0.871562501,55.803946 0.871562501,53.8440152 L0.871562501,3.68460726 C0.871562501,1.72467644 2.33452823,0.346777911 4.2241517,0.135838595 C4.98122117,0.0513266685 7.25178887,-0.463898336 9.36787427,1.41443037 Z" id="三角形" fill="#1E43CC" transform="translate(34.694244, 28.700324) scale(-1, 1) translate(-34.694244, -28.700324) "></path>
+            <g id="三角形">
+                <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+            </g>
+            <g id="三角形" transform="translate(38.422188, 35.645137) scale(-1, 1) translate(-38.422188, -35.645137) ">
+                <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                <use fill="#7292F1" fill-rule="evenodd" xlink:href="#path-6"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-6"></use>
+            </g>
+        </g>
+        <rect id="矩形" x="0" y="0" width="90" height="90"></rect>
+    </g>
+</svg>

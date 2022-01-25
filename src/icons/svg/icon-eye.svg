@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/我的_护眼设置</title>
+    <g id="icon/我的_护眼设置" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M22.5,14.4 C28.9873227,14.4 34.7964007,18.6131281 40.069611,26.6917436 L40.069611,26.6917436 L39.7261967,27.7859594 C34.5403897,34.2675792 28.8228722,37.6 22.5,37.6 C16.0483067,37.6 10.2281014,34.1310163 4.96004565,27.3891206 L4.96004565,27.3891206 L5.21938452,26.2537325 C10.416907,18.4610207 16.1322632,14.4 22.5,14.4 L22.5,14.4 Z" id="椭圆形" stroke="#333333" stroke-width="2.8"></path>
+        <circle id="椭圆形" stroke="#5981F9" stroke-width="2.8" cx="23" cy="26" r="4.6"></circle>
+        <path d="M9,11 C13.3333333,8.33333333 17.6666667,7 22,7 C26.3333333,7 30.6666667,8.33333333 35,11" id="路径-26" stroke="#333333" stroke-width="2.8" stroke-linecap="round"></path>
+    </g>
+</svg>

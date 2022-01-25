@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/删除</title>
+    <g id="我的" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.6.1.1我的_填写展示" transform="translate(-178.000000, -838.000000)">
+            <g id="编组-2" transform="translate(30.000000, 838.000000)">
+                <g id="编组-2" transform="translate(148.000000, 0.000000)">
+                    <g id="reload备份" fill="#000000">
+                        <rect id="矩形" fill-rule="nonzero" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                        <circle id="椭圆形" fill-opacity="0.495083042" cx="12" cy="12" r="12"></circle>
+                    </g>
+                    <g id="编组" transform="translate(12.000000, 12.000000) rotate(-315.000000) translate(-12.000000, -12.000000) translate(5.000000, 5.000000)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                        <line x1="0" y1="7" x2="14" y2="7" id="直线-13"></line>
+                        <line x1="7" y1="0" x2="7" y2="14" id="直线-13"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

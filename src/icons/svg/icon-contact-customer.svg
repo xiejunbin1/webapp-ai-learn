@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/我的_联系客服</title>
+    <g id="icon/我的_联系客服" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-23">
+            <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+            <path d="M6,9 L32,9 C32.5522847,9 33,9.44771525 33,10 L33,33 C33,35.209139 31.209139,37 29,37 L9,37 C6.790861,37 5,35.209139 5,33 L5,10 C5,9.44771525 5.44771525,9 6,9 Z" id="路径-16" stroke="#333333" stroke-width="2.8"></path>
+            <path d="M34,16 C37.3333333,16.8205128 39,19.3712375 39,23.6521739 C39,27.9331104 37.3333333,30.7157191 34,32" id="路径-17" stroke="#333333" stroke-width="2.8"></path>
+            <line x1="11" y1="30.5" x2="27.5" y2="30.5" id="路径-18" stroke="#5981F9" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"></line>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/我的_学习记录</title>
+    <g id="icon/我的_学习记录" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+        <circle id="椭圆形" stroke="#333333" stroke-width="2.8" cx="21.5" cy="20.5" r="14.1"></circle>
+        <path d="M31,20.5 C31,15.5294373 26.9162658,11.5 21.8787244,11.5 C20.8728111,11.5 19.9049294,11.6606676 19,11.9574134" id="路径" stroke="#5981F9" stroke-width="2.8" stroke-linecap="round"></path>
+        <line x1="37" y1="38" x2="31" y2="32" id="路径-21" stroke="#333333" stroke-width="2.8" stroke-linecap="round"></line>
+    </g>
+</svg>

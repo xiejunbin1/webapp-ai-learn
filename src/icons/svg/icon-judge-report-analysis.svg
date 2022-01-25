@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/诊断详情_数据</title>
+    <g id="icon/诊断详情_数据" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+        <g id="编组" transform="translate(5.000000, 5.000000)" stroke="#5981F9" stroke-width="2.8">
+            <circle id="椭圆形" cx="28" cy="9" r="4.6"></circle>
+            <circle id="椭圆形" cx="19" cy="27" r="5.6"></circle>
+            <line x1="11.5" y1="15.5" x2="15.5" y2="22.5" id="路径-8" fill="#5981F9"></line>
+            <line x1="26.5" y1="13.5" x2="22.5" y2="22.5" id="路径-17" fill="#5981F9"></line>
+            <circle id="椭圆形" cx="9" cy="9" r="7.6"></circle>
+        </g>
+    </g>
+</svg>

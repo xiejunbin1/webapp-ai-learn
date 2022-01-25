@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div ref="tagcanvasbox" class="tagcanvasbox">                    
+        <canvas id="myCanvas" width='844' height='475' ></canvas>
+    </div>
+</body>
+<style>
+.tagcanvasbox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid red;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid red;
+}
+</style>
+
+<script>//  400  800       150    300
+  //关键: 小图:大图 = 遮罩 :大图显示区
+    let dom = document.getElementById("myCanvas");
+    let ctx = dom.getContext("2d");
+    let tagObj = {
+        newrecsObj: {},
+        recs: [
+            {
+                h: 42,
+                w: 84,
+                x: 244,
+                y: 94,
+            },
+            {
+                h: 45,
+                w: 79,
+                x: 282,
+                y: 197,
+            }
+        ], //两个矩形的宽高与坐标
+        x: 0,
+        y: 0,
+        url: '',
+        radious: 5,
+        recSize: 5,
+        drag: false,
+        resize: false,
+        draw: false,
+        showLitRecs: true,
+        index: -1,
+        side: 0,
+        startX: 0,
+        startY: 0,
+        isRightClick: false,
+        move: false
+    }
+    let img = new Image()//创建一个image对象 通过构造函数创建 img 实例
+    img.src = "https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3228549874,2173006364&fm=26&gp=0.jpg";
+    img.setAttribute("crossOrigin",'Anonymous')//  解决图片跨域问题
+    this.img.onload =  (e) => { // 确保图片完整获取到，创建一个异步事件
+        this.drawImage1();
+    };
+
+    // 绑定鼠标按下事件
+    dom.onmousedown = (e) => {
+        tagObj.x = e.offsetX;
+        tagObj.y = e.offsetY;
+        tagObj.index = getEventIndex(tagObj.recs, tagObj.x, tagObj.y, tagObj.radious); //得到落点所在框的序数
+        console.log(tagObj.index, tagObj.recs);
+        if (e.button == 2) {
+            if (tagObj.index >= 0) {
+                tagObj.isRightClick = true;
+            }
+            return;
+        }
+        if (tagObj.index >= 0) { //移动或者放缩
+            tagObj.startX = tagObj.recs[tagObj.index].x;
+            tagObj.startY = tagObj.recs[tagObj.index].y;
+            tagObj.side = getEventArea(tagObj.recs[tagObj.index], tagObj.x, tagObj.y, tagObj.radious); //得到落点在一个框中的区域
+            if (tagObj.side < 9) { //准备缩放
+                tagObj.resize = true;
+            } else { //准备拖动
+                tagObj.drag = true;
+            }
+            drawLitRecs(ctx, prepareLitRecs(tagObj.recs[tagObj.index]), tagObj.recSize); //画移动小框
+        } else {
+            tagObj.draw = true;
+        }
+        changeResizeCursor(dom, tagObj.side); //判断小框类型
+    };
+
+    // 移动事件mousemove 
+    dom.onmousemove = (e) => {
+        var index;
+        var side;
+        clearCanvas(dom, ctx);
+        drawRuler(dom, ctx, e);
+        drawOldRecs(tagObj.recs, ctx); //必须放在moveRec之下
+        index = getEventIndex(tagObj.recs, e.offsetX, e.offsetY, tagObj.radious);
+        if (index > -1) {
+            side = getEventArea(tagObj.recs[index], e.offsetX, e.offsetY, tagObj.radious); //得到落点在一个框中的区域
+        } else {
+            side = 0;
+        }
+        changeResizeCursor(dom, side);
+        if (tagObj.showLitRecs && index >= 0 && side > 0) {
+            drawLitRecs(ctx, prepareLitRecs(tagObj.recs[index]), tagObj.recSize);
+        }
+        if (tagObj.draw) {
+            drawRec(dom, ctx, e);
+        }
+        if (tagObj.drag) {
+            moveRec(dom, tagObj.recs[tagObj.index], e);
+        }
+        if (tagObj.resize) {
+            reSizeRec(tagObj.side, tagObj.recs[tagObj.index], e.offsetX, e.offsetY, tagObj.recSize);
+        }
+    };
+
+    // 鼠标抬起事件onmouseup
+    dom.onmouseup = (e) => {
+        if (tagObj.isRightClick == true) {
+            tagObj.index = getEventIndex(tagObj.recs, tagObj.x, tagObj.y, tagObj.radious);
+            tagObj.recs.splice(tagObj.index, 1);
+            clearCanvas(dom, ctx);
+            for (var i = 0; i < tagObj.recs.length; i++) {
+                ctx.strokeRect(tagObj.recs[i].x, tagObj.recs[i].y, tagObj.recs[i].w, tagObj.recs[i].h);
+            }
+            tagObj.isRightClick = false;
+            return;
+        }
+        tagObj.resize = false;
+        tagObj.drag = false;
+        if (tagObj.draw) {
+            addToRecs(dom, e); //添加框
+            tagObj.draw = false;
+        }
+    };
+
+    dom.contextmenu = (e) => {
+        return false;
+    };
+
+    let getEventIndex = (recs, x, y, radious) => { //得到落点所在框的序数，-1代表没有落在任何框内 ，  // x初始值为0，y初始值为0
+        if (recs.length == 0) {
+            return -1;
+        }
+        for (var i = 0; i < recs.length; i++) {
+            if (x > (recs[i].x - radious) && x < (recs[i].x + recs[i].w + radious) &&
+                y > (recs[i].y - radious) && y < (recs[i].y + recs[i].h + radious)) {
+                return i;
+            }
+            if (i == recs.length - 1) {
+                return -1;
+            }
+        }
+    };
+    // 鼠标移除事件
+    dom.onmouseout = (e) => {
+        tagObj.draw = false
+        let x = e.clientX;
+        let y = e.clientY;
+        let domx1 = dom.offsetLeft;
+        let domy1 = dom.offsetTop;
+        let domx2 = dom.offsetLeft + dom.offsetWidth;
+        let domy2 = dom.offsetTop + dom.offsetHeight;
+        if (x < domx1 || x > domx2 || y < domy1 || y > domy2) {
+            clearCanvas(dom, ctx);
+            drawOldRecs(tagObj.recs, ctx);
+        }
+    };
+
+    let getEventArea = (data, x, y, radious) => { //得到落点在一个框中的区域
+        if (x > (data.x - radious) && x < (data.x + radious)) {
+            if (y > (data.y - radious) && y < (data.y + radious)) {
+                return 1;
+            } else if (y > (data.y + radious) && y < (data.y + data.h - radious)) {
+                return 2;
+            } else if (y > (data.y + data.h - radious) && y < (data.y + data.h + radious)) {
+                return 3;
+            }
+        } else if (x > (data.x + data.w - radious) && x < (data.x + data.w + radious)) {
+            if (y > (data.y - radious) && y < (data.y + radious)) {
+                return 4;
+            } else if (y > (data.y + radious) && y < (data.y + data.h - radious)) {
+                return 5;
+            } else if (y > (data.y + data.h - radious) && y < (data.y + data.h + radious)) {
+                return 6;
+            }
+        } else {
+            if (y > (data.y - radious) && y < (data.y + radious) && x > (data.x + radious) && x < (data.x + data.w - radious)) {
+                return 7;
+            } else if (y > (data.y + data.h - radious) && y < (data.y + data.h + radious) && x > (data.x + radious) && x < (data.x + data.w - radious)) {
+                return 8;
+            } else {
+                return 9;
+            }
+        }
+    };
+
+    let drawLitRecs = (ctx, data, size) => { //画移动时的小框,data为矩形框9个点的坐标
+        for (var i = 0; i < data.length; i++) {
+            ctx.strokeRect(data[i][0] - size / 2, data[i][1] - size / 2, size, size);
+        }
+    };
+
+    let prepareLitRecs = (data) => { //把一个框的左上角坐标和宽高输入，得到8个坐标，左3，右3中2
+        var li = [];
+        li[0] = [data.x, data.y];
+        li[1] = [data.x, data.y + data.h / 2];
+        li[2] = [data.x, data.y + data.h];
+        li[3] = [data.x + data.w, data.y];
+        li[4] = [data.x + data.w, data.y + data.h / 2];
+        li[5] = [data.x + data.w, data.y + data.h];
+        li[6] = [data.x + data.w / 2, data.y];
+        li[7] = [data.x + data.w / 2, data.y + data.h];
+        return li;
+    };
+
+    let changeResizeCursor = (canvas, index) => {
+        switch (index) {
+            case 0:
+                canvas.style.cursor = "crosshair";
+                break;
+            case 1:
+                canvas.style.cursor = "se-resize";
+                break;
+            case 2:
+                canvas.style.cursor = "e-resize";
+                break;
+            case 3:
+                canvas.style.cursor = "ne-resize";
+                break;
+            case 4:
+                canvas.style.cursor = "sw-resize";
+                break;
+            case 5:
+                canvas.style.cursor = "w-resize";
+                break;
+            case 6:
+                canvas.style.cursor = "nw-resize";
+                break;
+            case 7:
+                canvas.style.cursor = "s-resize";
+                break;
+            case 8:
+                canvas.style.cursor = "n-resize";
+                break;
+            case 9:
+                canvas.style.cursor = "move";
+                break;
+            default:
+                canvas.style.cursor = "default";
+        }
+    };
+
+    let clearCanvas = (canvas, ctx) => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    };
+
+    let drawRuler = (canvas, ctx, e) => { //鼠标画图辅助线
+        ctx.beginPath();
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 1;
+        //ctx.strokeStyle="#FF0000";
+        ctx.moveTo(e.offsetX, 0);
+        ctx.lineTo(e.offsetX, canvas.height);
+        ctx.moveTo(0, e.offsetY);
+        ctx.lineTo(canvas.width, e.offsetY);
+        ctx.stroke();
+    };
+
+    let drawOldRecs = (recs, ctx) => { //鼠标画图后
+        if (recs.length == 0) {
+            return 0;
+        }
+        for (var i = 0; i < recs.length; i++) {
+            ctx.beginPath();
+            ctx.lineWidth = 3;
+            ctx.strokeStyle = "rgb(0, 0, 0)";
+            ctx.strokeRect(recs[i].x, recs[i].y, recs[i].w, recs[i].h);
+        }
+    };
+
+    let drawRec = (canvas, ctx, e) => { //画图
+        tagObj.move = true
+        ctx.strokeRect(tagObj.x, tagObj.y, e.offsetX - tagObj.x, e.offsetY - tagObj.y);
+    };
+
+    let moveRec = (canvas, rec, e) => {
+        tagObj.move = true
+        rec.x = tagObj.startX + e.offsetX - tagObj.x;
+        rec.y = tagObj.startY + e.offsetY - tagObj.y;
+    };
+
+    let reSizeRec = (index, rec, ex, ey, recSize) => {
+        var temX = rec.x;
+        var temY = rec.y;
+        tagObj.move = true
+        if (index < 4 && temX + rec.w - ex > recSize) {
+            rec.x = ex;
+        }
+        if ((index == 1 || index == 4 || index == 7) && temY + rec.h - ey > recSize) {
+            rec.y = ey;
+        }
+        if (index < 4) {
+            if (temX + rec.w - ex > recSize) {
+                rec.w = temX + rec.w - ex;
+            }
+        } else if (index < 7) {
+            if (ex - temX > recSize) {
+                rec.w = ex - temX;
+            }
+        }
+        if (index == 1 || index == 4 || index == 7) {
+            if (temY + rec.h - ey > recSize) {
+                rec.h = temY + rec.h - ey;
+            }
+        } else if (index == 3 || index == 6 || index == 8) {
+            if (ey - temY > recSize) {
+                rec.h = ey - temY;
+            }
+        }
+    };
+
+    let addToRecs = (canvas, e) => {
+        var rec = {};
+        rec.x = (tagObj.x > e.offsetX) ? e.offsetX : tagObj.x;
+        rec.y = (tagObj.y > e.offsetY) ? e.offsetY : tagObj.y;
+        rec.w = Math.abs(e.offsetX - tagObj.x);
+        rec.h = Math.abs(e.offsetY - tagObj.y);
+        //rec.type = currentSelectedType;
+        tagObj.newrecsObj = rec;
+        console.log(tagObj.move,"tagObj.move")
+        if(tagObj.move) {
+            tagObj.recs.push(tagObj.newrecsObj);
+        }
+        tagObj.move = false
+        tagObj.url = dom.toDataURL();
+    };
+</script>
+
+</html>
+

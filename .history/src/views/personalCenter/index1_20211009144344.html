@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--  onmouseup="mouseUp($event)" onmousemove="mouseMove($event)" oncontextmenu.prevent="contextMenu($event)" onmouseout="mouseOut($event)" -->
+<body>
+    <div ref="tagcanvasbox" class="tagcanvasbox">        <!-- 按下事件 -->              <!-- 离开事件 -->           <!-- 鼠标移动 -->                                                               <!-- 移除事件 -->
+        <canvas id="myCanvas" width='844' height='475' ></canvas>
+    </div>
+</body>
+<style>
+.tagcanvasbox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid red;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid red;
+}
+</style>
+
+<script>//  400  800       150    300
+  //关键: 小图:大图 = 遮罩 :大图显示区
+    let dom = document.getElementById("myCanvas");
+    let ctx = dom.getContext("2d");
+    let tagObj = {
+        newrecsObj: {},
+        recs: [], //两个矩形的宽高与坐标
+        x: 0,
+        y: 0,
+        url: '',
+        radious: 5,
+        recSize: 5,
+        drag: false,
+        resize: false,
+        draw: false,
+        showLitRecs: true,
+        index: -1,
+        side: 0,
+        startX: 0,
+        startY: 0,
+        isRightClick: false
+    }
+    // 绑定鼠标按下事件
+    dom.onmousedown = function (e) {
+        console.log(e)
+        tagObj.x = e.offsetX;
+        tagObj.y = e.offsetY;
+        tagObj.index = getEventIndex(tagObj.recs, tagObj.x, tagObj.y, tagObj.radious); //得到落点所在框的序数
+        console.log(tagObj.index, tagObj.recs);
+        if (e.button == 2) {
+            if (tagObj.index >= 0) {
+                tagObj.isRightClick = true;
+            }
+            return;
+        }
+        if (tagObj.index >= 0) { //移动或者放缩
+            tagObj.startX = tagObj.recs[tagObj.index].x;
+            tagObj.startY = tagObj.recs[tagObj.index].y;
+            tagObj.side = getEventArea(tagObj.recs[tagObj.index], tagObj.x, tagObj.y, tagObj.radious); //得到落点在一个框中的区域
+            // console.log(this.tagObj.side,this.tagObj.index);
+            if (tagObj.side < 9) { //准备缩放
+                tagObj.resize = true;
+            } else { //准备拖动
+                tagObj.drag = true;
+            }
+            drawLitRecs(ctx, prepareLitRecs(tagObj.recs[tagObj.index]), tagObj.recSize); //画移动小框
+        } else {
+            this.tagObj.draw = true;
+        }
+        this.changeResizeCursor($refs.tagcanvas, tagObj.side); //判断小框类型
+    };
+
+    function getEventIndex(recs, x, y, radious) { //得到落点所在框的序数，-1代表没有落在任何框内 ，  // x初始值为0，y初始值为0
+        if (recs.length == 0) {
+            return -1;
+        }
+        for (var i = 0; i < recs.length; i++) {
+            if (x > (recs[i].x - radious) && x < (recs[i].x + recs[i].w + radious) &&
+                y > (recs[i].y - radious) && y < (recs[i].y + recs[i].h + radious)) {
+                return i;
+            }
+            if (i == recs.length - 1) {
+                return -1;
+            }
+        }
+    };
+
+    function getEventArea(data, x, y, radious) { //得到落点在一个框中的区域
+        if (x > (data.x - radious) && x < (data.x + radious)) {
+            if (y > (data.y - radious) && y < (data.y + radious)) {
+                return 1;
+            } else if (y > (data.y + radious) && y < (data.y + data.h - radious)) {
+                return 2;
+            } else if (y > (data.y + data.h - radious) && y < (data.y + data.h + radious)) {
+                return 3;
+            }
+        } else if (x > (data.x + data.w - radious) && x < (data.x + data.w + radious)) {
+            if (y > (data.y - radious) && y < (data.y + radious)) {
+                return 4;
+            } else if (y > (data.y + radious) && y < (data.y + data.h - radious)) {
+                return 5;
+            } else if (y > (data.y + data.h - radious) && y < (data.y + data.h + radious)) {
+                return 6;
+            }
+        } else {
+            if (y > (data.y - radious) && y < (data.y + radious) && x > (data.x + radious) && x < (data.x + data.w - radious)) {
+                return 7;
+            } else if (y > (data.y + data.h - radious) && y < (data.y + data.h + radious) && x > (data.x + radious) && x < (data.x + data.w - radious)) {
+                return 8;
+            } else {
+                return 9;
+            }
+        }
+    };
+
+    function drawLitRecs(ctx, data, size) { //画移动时的小框,data为矩形框9个点的坐标
+        for (var i = 0; i < data.length; i++) {
+            ctx.strokeRect(data[i][0] - size / 2, data[i][1] - size / 2, size, size);
+        }
+    }
+</script>
+
+</html>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="36px" viewBox="0 0 30 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>学习基地/未解锁</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="63.6343414%" id="linearGradient-1">
+            <stop stop-color="#FFE5A6" offset="0%"></stop>
+            <stop stop-color="#FFDA7F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFDE59" offset="0%"></stop>
+            <stop stop-color="#FBB346" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="2" y="12.5080046" width="25.92" height="20.88" rx="2.88"></rect>
+        <filter x="-5.8%" y="-7.2%" width="111.6%" height="114.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="学习基地/未解锁" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="锁">
+            <g id="编组-4">
+                <rect id="矩形" x="0" y="0" width="30" height="36"></rect>
+                <path d="M14.6,3.44 C17.0798518,3.44 19.3225506,4.48376725 20.9468515,6.16407858 C22.5885226,7.86235897 23.6,10.2095776 23.6,12.8 L23.6,12.8 L23.6,19.9030133 C23.3238154,20.2496733 23.0136151,20.3952432 22.6482795,20.5292969 C21.4308567,20.9760095 19.6699424,21.1480046 17.7226114,21.1480046 C13.4557574,21.1480046 8.27541575,20.2960001 5.6,19.0409083 L5.6,19.0409083 L5.6,12.8 C5.6,10.2095776 6.61147742,7.86235897 8.25314847,6.16407858 C9.87744942,4.48376725 12.1201482,3.44 14.6,3.44 L14.6,3.44 Z" id="椭圆形" stroke="url(#linearGradient-1)" stroke-width="2.88"></path>
+                <g id="矩形">
+                    <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+            </g>
+            <ellipse id="椭圆形" fill="#FFE8B6" transform="translate(14.960000, 20.422280) rotate(-1.000000) translate(-14.960000, -20.422280) " cx="14.96" cy="20.4222804" rx="3.18490089" ry="3.24"></ellipse>
+            <rect id="矩形备份" fill="#FFE8B6" x="12.8" y="18.56" width="4.32" height="10.08" rx="2.16"></rect>
+            <rect id="矩形" fill="#B7712C" x="13.52" y="19.28" width="2.88" height="8.64" rx="1.44"></rect>
+            <ellipse id="椭圆形" fill="#B7712C" transform="translate(14.960000, 20.422280) rotate(-1.000000) translate(-14.960000, -20.422280) " cx="14.96" cy="20.4222804" rx="2.54792071" ry="2.52"></ellipse>
+        </g>
+    </g>
+</svg>

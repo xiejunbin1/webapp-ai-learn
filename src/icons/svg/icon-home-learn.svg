@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104px" height="104px" viewBox="0 0 104 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tab/学习中心</title>
+    <defs>
+        <linearGradient x1="111.66408%" y1="60.5181059%" x2="-12.8943819%" y2="60.5181059%" id="linearGradient-1">
+            <stop stop-color="#7BEBD1" offset="0%"></stop>
+            <stop stop-color="#2AA57D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="111.66408%" y1="60.5181059%" x2="-12.8943819%" y2="60.5181059%" id="linearGradient-2">
+            <stop stop-color="#7CECD2" offset="0%"></stop>
+            <stop stop-color="#2AA57D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="24.8758212%" x2="57.4737129%" y2="50%" id="linearGradient-3">
+            <stop stop-color="#FFEAC9" offset="0%"></stop>
+            <stop stop-color="#FFAD70" offset="100%"></stop>
+        </linearGradient>
+        <path d="M4.125,12.375 L60.225,12.375 C62.9588095,12.375 65.175,14.5911905 65.175,17.325 L65.175,52.8 C65.175,55.9894444 62.5894444,58.575 59.4,58.575 L5.775,58.575 C2.58555557,58.575 -2.27394097e-15,55.9894444 0,52.8 L0,16.5 C6.09182497e-16,14.2218254 1.84682541,12.375 4.125,12.375 Z" id="path-4"></path>
+        <filter x="-2.3%" y="-3.2%" width="104.6%" height="106.5%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M36.2720594,30.8544126 L42.955,39.765 C43.7751429,40.8585238 43.5535238,42.4098571 42.46,43.23 C42.031587,43.5513098 41.5105163,43.725 40.975,43.725 L27.5139375,43.725 C26.1470328,43.725 25.0389375,42.6169048 25.0389375,41.25 C25.0389375,40.7517114 25.1893425,40.2650256 25.4704744,39.8536178 L28.086726,36.025 L28.086726,36.025 L32.3750852,30.7738984 C33.2396948,29.7151828 34.798858,29.5578287 35.8575736,30.4224383 C36.0127055,30.5491281 36.1518853,30.6941804 36.2720594,30.8544126 Z" id="path-6"></path>
+        <filter x="-14.2%" y="-12.7%" width="127.3%" height="161.4%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.701960784   0 0 0 0 0.380392157  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/tab/学习中心" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/学习中心">
+            <rect id="矩形" x="0" y="0" width="104" height="104"></rect>
+            <circle id="椭圆形" fill="#5981F9" cx="52.2" cy="52.2" r="50"></circle>
+            <g id="学习中心" transform="translate(19.000000, 17.000000)">
+                <path d="M42.6803263,1.24870664 C43.748869,1.96235863 44.1197884,3.35939489 43.5459753,4.50909967 L36.918372,17.7883136 C36.4296311,18.7675658 35.2395876,19.1652038 34.2603354,18.6764629 C34.1858918,18.6393084 34.113862,18.5975025 34.0446737,18.5512934 C32.976131,17.8376414 32.6052116,16.4406051 33.1790247,15.2909003 L39.806628,2.0116864 C40.2953689,1.03243419 41.4854124,0.63479622 42.4646646,1.12353713 C42.5391082,1.16069163 42.611138,1.20249754 42.6803263,1.24870664 Z" id="矩形" fill="#FFF6E7"></path>
+                <path d="M22.4946737,1.24870664 C23.4047966,0.640859048 24.6353549,0.885901679 25.2432025,1.79602467 C25.2894116,1.865213 25.3312175,1.93724281 25.368372,2.0116864 L31.9959753,15.2909003 C32.5697884,16.4406051 32.198869,17.8376414 31.1303263,18.5512934 C30.2202034,19.159141 28.9896451,18.9140983 28.3817975,18.0039753 C28.3355884,17.934787 28.2937825,17.8627572 28.256628,17.7883136 L21.6290247,4.50909967 C21.0552116,3.35939489 21.426131,1.96235863 22.4946737,1.24870664 Z" id="矩形" fill="#FFF6E7"></path>
+                <path d="M4.95,52.8 L15.675,52.8 C16.1306349,52.8 16.5,53.1693651 16.5,53.625 L16.5,62.7 C16.5,64.5225397 15.0225397,66 13.2,66 L7.425,66 C5.60246033,66 4.125,64.5225397 4.125,62.7 L4.125,53.625 C4.125,53.1693651 4.49436508,52.8 4.95,52.8 Z" id="矩形" fill="url(#linearGradient-1)"></path>
+                <path d="M47.85,52.8 L58.575,52.8 C59.0306349,52.8 59.4,53.1693651 59.4,53.625 L59.4,62.7 C59.4,64.5225397 57.9225397,66 56.1,66 L50.325,66 C48.5024603,66 47.025,64.5225397 47.025,62.7 L47.025,53.625 C47.025,53.1693651 47.3943651,52.8 47.85,52.8 Z" id="矩形" fill="url(#linearGradient-2)"></path>
+                <g id="矩形">
+                    <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                </g>
+                <rect id="矩形" fill="#FFEFE7" x="6.6" y="17.325" width="52.8" height="36.3" rx="0.825"></rect>
+                <g id="三角形" transform="translate(34.375000, 36.025000) rotate(90.000000) translate(-34.375000, -36.025000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                    <use fill="#FF9F73" fill-rule="evenodd" xlink:href="#path-6"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

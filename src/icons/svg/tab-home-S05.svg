@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="214px" height="244px" viewBox="0 0 214 244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>tab_功能入口化学</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="210" height="240" rx="11.4072"></rect>
+        <linearGradient x1="12.2607315%" y1="44.014492%" x2="39.385819%" y2="51.6643414%" id="linearGradient-3">
+            <stop stop-color="#D197F6" offset="0%"></stop>
+            <stop stop-color="#7942DD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="82.1888385%" y1="56.7760711%" x2="70.887652%" y2="60.9599576%" id="linearGradient-4">
+            <stop stop-color="#5F25C9" offset="0%"></stop>
+            <stop stop-color="#B58DFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="20.5597805%" y1="43.0153965%" x2="64.2103212%" y2="65.7864611%" id="linearGradient-5">
+            <stop stop-color="#CDB2FF" offset="0%"></stop>
+            <stop stop-color="#9C69F9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M60.1117312,31.4738279 L60.1103468,54.4800053 C60.1103114,55.0676632 60.2918222,55.6409833 60.6300523,56.1215478 L87.9986349,95.0074096 L87.9986349,95.0074096 C90.6919957,97.9723873 90.2007306,102.33809 86.9013636,104.75848 C85.5245852,105.768474 83.8018676,106.320126 82.0246024,106.320126 L8.09204033,106.320126 C3.83293061,106.320126 0.38024,103.217364 0.38024,99.3899132 C0.38024,97.7927731 0.994107087,96.2446521 2.11800783,95.0074096 L30.9733146,56.1400379 C31.3382567,55.6484701 31.5353166,55.0525076 31.5353535,54.4402808 L31.5367355,31.4738279 L31.5367355,31.4738279 L60.1117312,31.4738279 Z" id="path-6"></path>
+        <filter x="-3.9%" y="-4.7%" width="107.8%" height="109.4%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="3.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.859207063   0 0 0 0 0.782278963   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="tab_功能入口化学" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="预习/待完成/功能入口/数学" transform="translate(2.000000, 2.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="矩形" fill="#A97BFF" xlink:href="#path-1"></use>
+            <ellipse id="椭圆形" fill="url(#linearGradient-3)" mask="url(#mask-2)" cx="107.5" cy="229" rx="118.5" ry="41"></ellipse>
+            <g id="编组" transform="translate(90.000000, 91.000000)">
+                <path d="M65.1424172,31.4738279 L65.1410535,54.3943711 C65.1410154,55.0348004 65.3565462,55.6566013 65.7529307,56.1596212 L96.4530049,95.1186392 L96.4530049,95.1186392 C99.1160233,98.0836169 98.9772833,102.756017 95.4432936,104.792651 C93.9423621,105.657636 90.0802359,106.320126 88.3229927,106.320126 L13.7087619,106.320126 C9.49763382,106.320126 6.08384,103.217364 6.08384,99.3899132 C6.08384,97.7927731 6.69079148,96.2446521 7.80203075,95.0074096 L36.3351005,56.1361734 C36.6942531,55.6468917 36.8879343,55.055784 36.8879704,54.4488348 L36.8893374,31.4738279 L36.8893374,31.4738279 L65.1424172,31.4738279 Z" id="路径" fill="url(#linearGradient-4)"></path>
+                <g id="路径备份">
+                    <use fill="url(#linearGradient-5)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                </g>
+                <ellipse id="椭圆形" fill="#D6C0FF" cx="47.91024" cy="71.7756808" rx="5.7036" ry="5.75740755"></ellipse>
+                <ellipse id="椭圆形" fill="#D6C0FF" cx="56.94094" cy="6.04527792" rx="5.2283" ry="5.27762358"></ellipse>
+                <ellipse id="椭圆形" fill="#C3A3FF" cx="45.53374" cy="13.7218213" rx="3.3271" ry="3.35848774"></ellipse>
+                <ellipse id="椭圆形备份" fill="#D6C0FF" cx="64.07044" cy="90.0074713" rx="3.8024" ry="3.8382717"></ellipse>
+                <ellipse id="椭圆形备份-2" fill="#D6C0FF" cx="30.32414" cy="96.2446628" rx="2.3765" ry="2.39891981"></ellipse>
+                <path d="M27.75752,22.8377166 L65.49634,22.8377166 C67.8588485,22.8377166 69.77404,24.7529081 69.77404,27.1154166 L69.77404,29.1152638 C69.77404,31.4777722 67.8588485,33.3929638 65.49634,33.3929638 L28.32788,33.3929638 C27.0678755,33.3929638 26.04644,32.3715283 26.04644,31.1115238 L26.04644,24.5487966 C26.04644,23.6037932 26.8125166,22.8377166 27.75752,22.8377166 Z" id="矩形" fill="#FFCD71"></path>
+                <rect id="矩形" fill="#F99C35" x="65.97164" y="22.8377166" width="3.8024" height="10.5552472" rx="1.14072"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/诊断详情_听诊器</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.349020 0 0 0 0 0.505882 0 0 0 0 0.976471 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/诊断详情_听诊器" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+        <g filter="url(#filter-1)">
+            <g transform="translate(4.000000, 7.000000)">
+                <path d="M4,0 C2.66666667,0 1.33333333,0 0,0 C0,1.55555556 0,9.41952345 0,11.4444444 C0,16.1695473 4.25329873,20 9.5,20 C14.7467185,20 19,16.1695473 19,11.4444444 C19,9.4037409 19,1.94444444 19,0 L15,0" id="路径" stroke="#979797" stroke-width="2.8"></path>
+                <circle id="椭圆形" stroke="#979797" stroke-width="2.8" cx="30.5" cy="6.5" r="5.1"></circle>
+                <path d="M31,12 C31,13.7746661 31,15.1079994 31,16 C31,23 31,30 20,30 C12.6670478,30 9.00038118,26.6666667 9,20" id="路径-3" stroke="#979797" stroke-width="2.8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

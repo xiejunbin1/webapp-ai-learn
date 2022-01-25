@@ -1,0 +1,70 @@
+@import './variables.less';
+@import './mixin.less';
+@import './common.less';
+//使得数据加载出来之前不显示{{}}
+[v-cloak] {
+  display: none;
+}
+
+.test_class {
+  color: #fff;
+}
+//弹框 
+//标题
+.van-dialog__header{
+  font-size: 16px;
+  color: #333;
+  font-weight: 700;
+}
+//弹框内容
+.van-dialog--round-button .van-dialog__message{
+  color: #666;
+  font-size: 13px;
+}
+.van-dialog--round-button .van-dialog__confirm, .van-dialog--round-button .van-dialog__cancel{
+  height: 30px;
+}
+//弹框底部按钮
+.van-dialog__footer{
+  justify-content: space-around;
+  .van-goods-action-button{
+    flex : 0 0 80px;
+    font-size: 13px;
+  }
+  //取消按钮
+  .van-goods-action-button--warning{
+    background: @cancel_grey;
+  }
+  .van-button--warning{
+    background: @cancel_grey;
+    color: #333;
+  }
+  .van-goods-action-button--first,.van-goods-action-button--last{
+    border-radius: 30px;
+    width: 85px;
+  }
+  //确定按钮
+  .van-goods-action-button--danger{
+    background: @common_blue;
+  }
+}
+
+//全局朴素按钮
+.van-button--plain.van-button--info{
+  color: @common_blue;
+  background: #fff;
+}
+.van-button--info{
+  background-color: @common_blue;
+  border: 1px solid @common_blue;
+}
+
+//弹框确认按钮
+.van-dialog__confirm{
+  color: @common_blue;
+}
+
+.van-cell{
+  padding: 15px;
+}
+

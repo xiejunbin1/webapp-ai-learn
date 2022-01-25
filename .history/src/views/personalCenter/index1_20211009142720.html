@@ -1,0 +1,102 @@
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+        <script type="text/javascript" src="JS/jquery.min.js"></script>
+    </head>
+    <body>
+     
+        <canvas id="myCanvas" width="500" height="400" style="border:1px solid #000000; background-color: #CCCCCC;"></canvas>
+        <input id="Button1" type="button" value="画矩形" onclick="DrawingRec()" />
+        <input id="Button2" type="button" value="画线"  onclick="Drawline()"/>
+        <p></p>
+    </body>
+    </html>
+     
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var list = [];
+        var currentImag;
+        var ax, ay, x, y;
+        var startmove = false;
+        var c = document.getElementById("myCanvas");
+        c.onmousedown = function (e) {
+     
+            for (var i = 0; i < list.length; i++) {
+                var w = list[i].x + list[i].width;
+                var h = list[i].y + list[i].height;
+                if (e.clientX < w && e.clientX > list[i].x && e.clientY < h && e.clientY > list[i].y) {
+                    currentImag = list[i];
+                    startmove = true;
+                    console.log("select: true");
+                }
+     
+            }
+     
+     
+        };
+        c.onmousemove = function (e) {
+            console.log("x:" + e.pageX + " y:" + e.pageY);
+            if (currentImag == null) return;
+            console.log("moveselect:true");
+             
+            x = e.clientX;
+            y = e.clientY;
+     
+            //限制移动不能超出画布
+            (x < 40) ? ax = 20 : ax = 480;
+            (y < 40) ? ay = 20 : ay = 380;
+     
+            (x < 480 && x > 20) ? x = e.clientX : x = ax;
+            (y < 380 && y > 20) ? y = e.clientY : y = ay;
+     
+            //清除之前图片然后重新绘制
+            ctx.clearRect(0, 0, c.width, c.height);
+            currentImag.x = x;
+            currentImag.y = y;
+     
+            Piant();
+            ctx.drawImage(currentImag, x - 20, y - 20, currentImag.width, currentImag.height);
+     
+            
+        };
+     
+        c.onmouseup = function () {
+            //c.onmousemove = null;
+            //c.onmouseup = null;
+     
+            currentImag = null;
+            startmove = false;
+        };
+        function Piant()
+        {
+            if (startmove)
+            {
+                for (var i = 0; i < list.length; i++)
+                {
+                    ctx.drawImage(list[i], list[i].x - 20, list[i].y - 20, list[i].width, list[i].height);
+                }
+            }
+        }
+     
+        function DrawingRec()
+        {
+            //ctx.beginPath();
+            //ctx.fillStyle = "#000000";
+            //ctx.fillRect(200, 100, 150, 75);
+            //ctx.closePath();
+             
+     
+            var img = new Image();
+            img.src = "default/images/panel_tools.png";
+            img.x = 50;
+            img.y = 50;
+            img.width = 40;
+            img.height = 40;
+            ctx.drawImage(img, 50, 50, img.width, img.height);
+            
+     
+     
+            list.push(img);
+        }
+    </script>

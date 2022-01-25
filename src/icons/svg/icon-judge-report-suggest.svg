@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/诊断详情_建议</title>
+    <g id="icon/诊断详情_建议" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="44" height="44"></rect>
+        <path d="M28.4666667,27.4666667 C32.4805578,25.1692765 35,21.9166761 35,17.2 C35,9.98347927 28.7319865,6 21,6 C13.2680135,6 7,9.98347927 7,17.2 C7,21.844457 9.7543971,25.0425758 13.6662256,27.359851 L15,34 L27,34 L28.4666667,27.4666667 Z" id="形状结合" stroke="#5981F9" stroke-width="2.8"></path>
+        <line x1="13" y1="39" x2="29" y2="39" id="路径-18" stroke="#5981F9" stroke-width="2.8"></line>
+    </g>
+</svg>
